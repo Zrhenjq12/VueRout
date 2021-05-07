@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main-links">  
+  <router-link to="/">На 1 страницу</router-link>
+  <router-link to="/card" >На главную</router-link> 
+  </div>
+
+  <div class="main-content">
+  <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.main-content{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#app{
+  color: #fff;
+      margin-top: 0px  !important;
+}
+.form-group{
+  text-align: left;
+}
+*{
+ font-family: 'Lora', serif;
+}
+.main-links{
+  display: flex;
+  justify-content: space-evenly;
+}
+.router-link-active{
+  cursor: default;
+  color: rgba(0, 0, 0, .3);
+  text-decoration: none;
+}
+.router-link-active:hover{
+  color: rgba(0, 0, 0, .3);
 }
 </style>
